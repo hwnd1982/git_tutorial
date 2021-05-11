@@ -1,0 +1,26 @@
+
+HWND@HWND-PC MINGW64 ~
+$ hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cd ../
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ git clone git://localhost/hello.git network_hello
+lsCloning into 'network_hello'...
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (40/40), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 40 (delta 4), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (40/40), done.
+Resolving deltas: 100% (4/4), done.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ cd network_hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/network_hello (master)
+$ ls
+README  index.html  lib/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/network_hello (master)
+$

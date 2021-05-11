@@ -1,0 +1,1193 @@
+
+HWND@HWND-PC MINGW64 ~
+$ git config --global user.name "Kirill Lavrov"
+
+HWND@HWND-PC MINGW64 ~
+$ git config --global user.email "lkv@myttk.ru"
+
+HWND@HWND-PC MINGW64 ~
+$ git config --global core.autocrlf true
+
+HWND@HWND-PC MINGW64 ~
+$ git config --global core.safecrlf warn
+
+HWND@HWND-PC MINGW64 ~
+$ git config --global core.quotepath off
+
+HWND@HWND-PC MINGW64 ~
+$ hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ touch hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git init
+Reinitialized existing Git repository in D:/git_tutorial/work/hello/.git/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "First Commit"
+[master (root-commit) 42277cb] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.html
+
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit
+hint: Waiting for your editor to close the file...
+[main 2021-05-11T13:52:27.389Z] update#setState idle
+[main 2021-05-11T13:52:57.393Z] update#setState checking for updates
+[main 2021-05-11T13:52:57.491Z] update#setState idle
+[master b0d9a48] Added h1 tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.html
+
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Added standard HTML page tags"
+[master f91257c] Added standard HTML page tags
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add .
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.html
+
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Added HTML header"
+[master 19dc60c] Added HTML header
+ 1 file changed, 2 insertions(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log
+commit 19dc60c3e7040d174d62e3cbe7eea56040aece58 (HEAD -> master)
+Author: Kirill Lavrov <lkv@myttk.ru>
+Date:   Tue May 11 20:55:27 2021 +0700
+
+    Added HTML header
+
+commit f91257cbb3b0164cfa047501e8fc030b04dbc7e5
+Author: Kirill Lavrov <lkv@myttk.ru>
+Date:   Tue May 11 20:54:59 2021 +0700
+
+    Added standard HTML page tags
+
+commit b0d9a48fac1da1afa1f0ff8a7dc03f1e95699b63
+Author: Kirill Lavrov <lkv@myttk.ru>
+Date:   Tue May 11 20:52:26 2021 +0700
+
+    Added h1 tag
+
+commit 42277cb397b3549d538f4691fa5da29e81f67614 (origin/master)
+Author: Kirill Lavrov <lkv@myttk.ru>
+Date:   Tue May 11 20:37:10 2021 +0700
+
+    First Commit
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline
+19dc60c3e7040d174d62e3cbe7eea56040aece58 (HEAD -> master) Added HTML header
+f91257cbb3b0164cfa047501e8fc030b04dbc7e5 Added standard HTML page tags
+b0d9a48fac1da1afa1f0ff8a7dc03f1e95699b63 Added h1 tag
+42277cb397b3549d538f4691fa5da29e81f67614 (origin/master) First Commit
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline --max-count=2
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+19dc60c3e7040d174d62e3cbe7eea56040aece58 (HEAD -> master) Added HTML header
+f91257cbb3b0164cfa047501e8fc030b04dbc7e5 Added standard HTML page tags
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline --since='5 minutes ago'
+19dc60c3e7040d174d62e3cbe7eea56040aece58 (HEAD -> master) Added HTML header
+f91257cbb3b0164cfa047501e8fc030b04dbc7e5 Added standard HTML page tags
+b0d9a48fac1da1afa1f0ff8a7dc03f1e95699b63 Added h1 tag
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline --until='5 minutes ago'
+42277cb397b3549d538f4691fa5da29e81f67614 (origin/master) First Commit
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline --author=<your name>
+bash: syntax error near unexpected token `newline'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=oneline --all
+19dc60c3e7040d174d62e3cbe7eea56040aece58 (HEAD -> master) Added HTML header
+f91257cbb3b0164cfa047501e8fc030b04dbc7e5 Added standard HTML page tags
+b0d9a48fac1da1afa1f0ff8a7dc03f1e95699b63 Added h1 tag
+42277cb397b3549d538f4691fa5da29e81f67614 (origin/master) First Commit
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+19dc60c Tue May 11 20:55:27 2021 +0700 Added HTML header (Kirill Lavrov)
+f91257c Tue May 11 20:54:59 2021 +0700 Added standard HTML page tags (Kirill Lavrov)
+b0d9a48 Tue May 11 20:52:26 2021 +0700 Added h1 tag (Kirill Lavrov)
+42277cb Tue May 11 20:37:10 2021 +0700 First Commit (Kirill Lavrov)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+* 19dc60c 2021-05-11 | Added HTML header (HEAD -> master) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* 19dc60c 2021-05-11 | Added HTML header (HEAD -> master) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gco 42277cb; cat hello.html
+Note: switching to '42277cb'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 42277cb First Commit
+Hello, World!
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((42277cb...))
+$ git checkout master
+Previous HEAD position was 42277cb First Commit
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat hello.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git tag v1
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout v1^
+Note: switching to 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f91257c Added standard HTML page tags
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((f91257c...))
+$ cat hello.html
+<html>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((f91257c...))
+$ git tag v1-beta
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((v1-beta))
+$ git checkout v1
+Previous HEAD position was f91257c Added standard HTML page tags
+HEAD is now at 19dc60c Added HTML header
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((v1))
+$ git checkout v1-beta
+Previous HEAD position was 19dc60c Added HTML header
+HEAD is now at f91257c Added standard HTML page tags
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((v1-beta))
+$ git tag
+v1
+v1-beta
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((v1-beta))
+$ git hist master --all
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1, master) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (HEAD, tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello ((v1-beta))
+$ git checkout master
+Previous HEAD position was f91257c Added standard HTML page tags
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout hello.html
+cat hello.htmlUpdated 1 path from the index
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat hello.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ gs
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.html
+
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git reset HEAD hello.html
+Unstaged changes after reset:
+M       hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout hello.html
+Updated 1 path from the index
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Oops, we didn't want this commit"
+[master 169f85e] Oops, we didn't want this commit
+ 1 file changed, 1 insertion(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git revert HEAD
+hint: Waiting for your editor to close the file...
+[main 2021-05-11T14:03:49.104Z] update#setState idle
+[master f861a68] Revert "Oops, we didn't want this commit"
+ 1 file changed, 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* f861a68 2021-05-11 | Revert "Oops, we didn't want this commit" (HEAD -> master) [Kirill Lavrov]
+* 169f85e 2021-05-11 | Oops, we didn't want this commit [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* f861a68 2021-05-11 | Revert "Oops, we didn't want this commit" (HEAD -> master) [Kirill Lavrov]
+* 169f85e 2021-05-11 | Oops, we didn't want this commit [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git tag oops
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git reset --hard v1
+HEAD is now at 19dc60c Added HTML header
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* 19dc60c 2021-05-11 | Added HTML header (HEAD -> master, tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --all
+* f861a68 2021-05-11 | Revert "Oops, we didn't want this commit" (tag: oops) [Kirill Lavrov]
+* 169f85e 2021-05-11 | Oops, we didn't want this commit [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (HEAD -> master, tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git tag -d oops
+Deleted tag 'oops' (was f861a68)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --all
+* 19dc60c 2021-05-11 | Added HTML header (HEAD -> master, tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Add an author comment"
+[master 808d371] Add an author comment
+ 1 file changed, 1 insertion(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit --amend -m "Add an author/email comment"
+[master 6e874d2] Add an author/email comment
+ Date: Tue May 11 21:06:21 2021 +0700
+ 1 file changed, 1 insertion(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* 6e874d2 2021-05-11 | Add an author/email comment (HEAD -> master) [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ mkdir lib
+git status
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git mv hello.html lib
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    hello.html -> lib/hello.html
+
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Moved hello.html to lib"
+[master 76ccb9c] Moved hello.html to lib
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename hello.html => lib/hello.html (100%)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add index.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Added index.html."
+[master 3a8e55d] Added index.html.
+ 1 file changed, 5 insertions(+)
+ create mode 100644 index.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls -C .git
+COMMIT_EDITMSG  HEAD       config       hooks/  info/  objects/     refs/
+FETCH_HEAD      ORIG_HEAD  description  index   logs/  packed-refs
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls -C .git/objects
+02/  15/  19/  22/  31/  3e/  53/  6e/  80/  9b/  b0/  b9/  e3/  f9/    pack/
+10/  16/  1a/  2d/  3a/  42/  60/  76/  85/  a6/  b4/  d3/  f8/  info/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls -C .git/objects/02
+7def9b7bcaa390ac2f546a3940f91137fa2900
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/hwnd1982/hello.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/hwnd1982/hello.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[user]
+    name = Kirill Lavrov
+    email = lkv@myttk.ru
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls .git/refs
+ls .git/refs/tags
+cat .git/refs/tags/v1heads/  remotes/  tags/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls .git/refs/heads
+master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ ls .git/refs/tags
+v1  v1-beta
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat .git/refs/tags/v1
+19dc60c3e7040d174d62e3cbe7eea56040aece58
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat .git/HEAD
+ref: refs/heads/master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --max-count=1
+* 3a8e55d 2021-05-11 | Added index.html. (HEAD -> master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git type 3a8e55d
+commit
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dumo 3a8e55d
+git: 'dumo' is not a git command. See 'git --help'.
+
+The most similar command is
+        dump
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 3a8e55d
+tree 9bbd7c047e914a861ccc33c8f515a09d325278cd
+parent 76ccb9c8a65cd617bdfd41b6b932c1df8209bc9e
+author Kirill Lavrov <lkv@myttk.ru> 1620742210 +0700
+committer Kirill Lavrov <lkv@myttk.ru> 1620742210 +0700
+
+Added index.html.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 9bbd7c0
+100644 blob 312e90929330e16bc3f4a16483e446dafc9c507b    index.html
+040000 tree 606833756feea127efe0396a46ba25e3edaf4dc9    lib
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 6068333
+fatal: Not a valid object name 6068333
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 6068337
+100644 blob 1a64da5e0e10dd7df063d260c836836f4b346914    hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 1a64a5e
+fatal: Not a valid object name 1a64a5e
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git dump 1a64da5
+<!-- Author: Kirill Lavrov (lkv@myttk.ru) -->
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout -b style
+Switched to a new branch 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git status
+On branch style
+nothing to commit, working tree clean
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ touch lib/style.css
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git add lib/style.css
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git commit -m "Added css stylesheet"
+[style 1e12740] Added css stylesheet
+ 1 file changed, 3 insertions(+)
+ create mode 100644 lib/style.css
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git add lib/hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git commit -m "Hello uses style.css"
+[style 5ced236] Hello uses style.css
+ 1 file changed, 1 insertion(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git add index.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git commit -m "Updated index.html"
+[style 9206194] Updated index.html
+ 1 file changed, 3 insertions(+)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git hist --all
+* 9206194 2021-05-11 | Updated index.html (HEAD -> style) [Kirill Lavrov]
+* 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. (master) [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cat lib/hello.html
+<!-- Author: Kirill Lavrov (lkv@myttk.ru) -->
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout style
+Switched to branch 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ cat lib/hello.html
+<!-- Author: Kirill Lavrov (lkv@myttk.ru) -->
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" media="all" href="style.css" />
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Added README"
+[master d8b6bee] Added README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --all
+* d8b6bee 2021-05-11 | Added README (HEAD -> master) [Kirill Lavrov]
+| * 9206194 2021-05-11 | Updated index.html (style) [Kirill Lavrov]
+| * 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+| * 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout style
+git hist --allSwitched to branch 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git merge master
+hint: Waiting for your editor to close the file...
+[main 2021-05-11T14:23:15.898Z] update#setState idle
+Merge made by the 'recursive' strategy.
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git hist --all
+*   7dcbaf1 2021-05-11 | Merge branch 'master' into style (HEAD -> style) [Kirill Lavrov]
+|\
+| * d8b6bee 2021-05-11 | Added README (master) [Kirill Lavrov]
+* | 9206194 2021-05-11 | Updated index.html [Kirill Lavrov]
+* | 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* | 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add lib/hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m 'Life is great!'
+[master 00785b2] Life is great!
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --all
+* 00785b2 2021-05-11 | Life is great! (HEAD -> master) [Kirill Lavrov]
+| *   7dcbaf1 2021-05-11 | Merge branch 'master' into style (style) [Kirill Lavrov]
+| |\
+| |/
+|/|
+* | d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+| * 9206194 2021-05-11 | Updated index.html [Kirill Lavrov]
+| * 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+| * 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout style
+Switched to branch 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git merge master
+Auto-merging lib/hello.html
+CONFLICT (content): Merge conflict in lib/hello.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style|MERGING)
+$ git add lib/hello.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style|MERGING)
+$ git commit -m "Merged master fixed conflict."
+[style d841db5] Merged master fixed conflict.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout style
+Already on 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git hist
+*   d841db5 2021-05-11 | Merged master fixed conflict. (HEAD -> style) [Kirill Lavrov]
+|\
+| * 00785b2 2021-05-11 | Life is great! (master) [Kirill Lavrov]
+* | 7dcbaf1 2021-05-11 | Merge branch 'master' into style [Kirill Lavrov]
+|\|
+| * d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+* | 9206194 2021-05-11 | Updated index.html [Kirill Lavrov]
+* | 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* | 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git reset --hard 9206194
+HEAD is now at 9206194 Updated index.html
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git hist --all
+* 00785b2 2021-05-11 | Life is great! (master) [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+| * 9206194 2021-05-11 | Updated index.html (HEAD -> style) [Kirill Lavrov]
+| * 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+| * 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* 00785b2 2021-05-11 | Life is great! (HEAD -> master) [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git reset --hard ^C
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git reset --hard d8b6bee
+HEAD is now at d8b6bee Added README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git reset --hard d8b6bee
+HEAD is now at d8b6bee Added README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist --all
+* d8b6bee 2021-05-11 | Added README (HEAD -> master) [Kirill Lavrov]
+| * 9206194 2021-05-11 | Updated index.html (style) [Kirill Lavrov]
+| * 5ced236 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+| * 1e12740 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+|/
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout style
+git histSwitched to branch 'style'
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git rebase master
+Successfully rebased and updated refs/heads/style.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git hist
+* 8e1626d 2021-05-11 | Updated index.html (HEAD -> style) [Kirill Lavrov]
+* 2f261c2 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* 36d42c1 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README (master) [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (style)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git merge style
+Updating d8b6bee..8e1626d
+Fast-forward
+ index.html     | 3 +++
+ lib/hello.html | 1 +
+ lib/style.css  | 3 +++
+ 3 files changed, 7 insertions(+)
+ create mode 100644 lib/style.css
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git hist
+* 8e1626d 2021-05-11 | Updated index.html (HEAD -> master, style) [Kirill Lavrov]
+* 2f261c2 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* 36d42c1 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit (origin/master) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cd ..
+ls
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ pwd
+/d/git_tutorial/work
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ ls
+hello/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ git clone hello cloned_hello
+Cloning into 'cloned_hello'...
+done.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ ls
+cloned_hello/  hello/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ cd cloned_hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ ls
+README  index.html  lib/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git hist --all
+* 8e1626d 2021-05-11 | Updated index.html (HEAD -> master, origin/style, origin/master, origin/HEAD) [Kirill Lavrov]
+* 2f261c2 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* 36d42c1 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git remote
+origin
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: D:/git_tutorial/work/hello
+  Push  URL: D:/git_tutorial/work/hello
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    style  tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git branch
+* master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cd ../hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Changed README in original repo"
+[master 61883da] Changed README in original repo
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cd ../cloned_hello
+git hist --all
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 373 bytes | 4.00 KiB/s, done.
+From D:/git_tutorial/work/hello
+   8e1626d..61883da  master     -> origin/master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git hist --all
+* 61883da 2021-05-11 | Changed README in original repo (origin/master, origin/HEAD) [Kirill Lavrov]
+* 8e1626d 2021-05-11 | Updated index.html (HEAD -> master, origin/style) [Kirill Lavrov]
+* 2f261c2 2021-05-11 | Hello uses style.css [Kirill Lavrov]
+* 36d42c1 2021-05-11 | Added css stylesheet [Kirill Lavrov]
+* d8b6bee 2021-05-11 | Added README [Kirill Lavrov]
+* 3a8e55d 2021-05-11 | Added index.html. [Kirill Lavrov]
+* 76ccb9c 2021-05-11 | Moved hello.html to lib [Kirill Lavrov]
+* 6e874d2 2021-05-11 | Add an author/email comment [Kirill Lavrov]
+* 19dc60c 2021-05-11 | Added HTML header (tag: v1) [Kirill Lavrov]
+* f91257c 2021-05-11 | Added standard HTML page tags (tag: v1-beta) [Kirill Lavrov]
+* b0d9a48 2021-05-11 | Added h1 tag [Kirill Lavrov]
+* 42277cb 2021-05-11 | First Commit [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cat README
+This is the Hello World example from the git tutorial.
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git merge origin/master
+Updating 8e1626d..61883da
+Fast-forward
+ README | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cat README
+This is the Hello World example from the git tutorial.
+(changed in original)
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git pull
+Already up to date.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git branch --track style origin/style
+git hist --max-count=2Branch 'style' set up to track remote branch 'style' from 'origin'.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git branch -a
+* master
+  style
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git hist --max-count=2
+* 61883da 2021-05-11 | Changed README in original repo (HEAD -> master, origin/master, origin/HEAD) [Kirill Lavrov]
+* 8e1626d 2021-05-11 | Updated index.html (origin/style, style) [Kirill Lavrov]
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cd ..
+ls hello.git
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ git clone --bare hello hello.git
+Cloning into bare repository 'hello.git'...
+done.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ ls hello.git
+HEAD  config  description  hooks/  info/  objects/  packed-refs  refs/
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ cd hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git remote add shared ../hello.git
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git checkout master
+git commit -m "Added shared comment to readme"Already on 'master'
+M       README
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git add README
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git commit -m "Added shared comment to readme"
+[master 1eebd84] Added shared comment to readme
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ git push shared master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 400 bytes | 400.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To ../hello.git
+   61883da..1eebd84  master -> master
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/hello (master)
+$ cd ../cloned_hello
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git remote add shared ../hello.git
+git pull shared master
+cat README
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git branch --track shared master
+Branch 'shared' set up to track local branch 'master'.
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ git pull shared master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 380 bytes | 3.00 KiB/s, done.
+From ../hello
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> shared/master
+Updating 61883da..1eebd84
+Fast-forward
+ README | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cat README
+This is the Hello World example from the git tutorial.
+(Changed in the original and pushed to shared)
+HWND@HWND-PC MINGW64 /d/git_tutorial/work/cloned_hello (master)
+$ cd ../
+
+HWND@HWND-PC MINGW64 /d/git_tutorial/work (main)
+$ git daemon --verbose --export-all --base-path=.
+[12656] Ready to rumble
+[10944] Connection from 127.0.0.1:61844
+[10944] unable to set SO_KEEPALIVE on socket: Input/output error
+[10944] Extended attribute "host": localhost
+[10944] Extended attribute "protocol": version=2
+[10944] Request upload-pack for '/hello.git'
